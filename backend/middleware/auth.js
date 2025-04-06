@@ -3,18 +3,24 @@ const User = require('../models/User');
 
 module.exports = async (req, res, next) => {
   try {
-    const token = req.header('Authorization').replace('Bearer ', '');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findOne({ _id: decoded._id, 'tokens.token': token });
-    
-    if (!user) {
-      throw new Error();
+    const authHeader = req.header('Authorization');
+
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'No token provided' });
     }
-    
-    req.token = token;
+
+    const token = authHeader.replace('Bearer ', '').trim();
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const user = await User.findById(decoded._id);
+    if (!user) {
+      return res.status(401).json({ error: 'User not found' });
+    }
+
     req.user = user;
     next();
   } catch (error) {
-    res.status(401).send({ error: 'Please authenticate' });
+    console.error('Auth error:', error.message);
+    res.status(401).json({ error: 'Authentication failed' });
   }
 };

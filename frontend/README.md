@@ -1,113 +1,123 @@
-Student-Mentor Portal
+📘 Student-Mentor Portal
+A full-stack web application that allows students to book sessions with mentors. Built using MongoDB, Express.js, ReactJS, and NodeJS (MERN stack).
 
-Project Overview
+🚀 Features
+👩‍🎓 For Students:
+Register & login
 
-This is a full-stack web application that allows students to book sessions with mentors. The application uses MongoDB for the database, ReactJS for the frontend, and Node.js with Express for the backend.
+View available mentors
 
-Features
+Book sessions based on mentor availability
 
-Students can:
+🧑‍🏫 For Mentors:
+Register & login
 
-Register and log in
+Set session availability
 
-View a list of available mentors
+View & manage student bookings
 
-Book sessions with mentors
+🧱 Tech Stack
+Frontend: ReactJS, Material UI
 
-Mentors can:
+Backend: NodeJS, ExpressJS
 
-Register and log in
+Database: MongoDB (MongoDB Atlas or Local)
 
-Set their availability for sessions
+Authentication: JWT (JSON Web Tokens)
 
-View and manage bookings
+🏗️ Application Architecture
+pgsql
+Copy
+Edit
+/client              --> React frontend
+/server              --> Node.js + Express backend
+  |-- /models        --> Mongoose schemas (User, Booking)
+  |-- /routes        --> API route handlers
+  |-- /controllers   --> Business logic for each endpoint
+  |-- /middleware    --> Auth middleware (JWT protection)
+🛠️ Setup Instructions
+✅ Prerequisites:
+Node.js & npm installed
 
-Setup Instructions
+MongoDB Atlas account (or local MongoDB)
 
-⿡ Open Visual Studio Code
-
-Open VS Code on your system.
-
-Click File → Open Folder...
-
-Select the project folder student-mentor-portal.
-
-Click "Open"
-
-⿢ Open Terminal
-
-Click on the "Terminal" menu at the top.
-
-Select "New Terminal"
-
-OR use the shortcut: Ctrl +  (backtick key)
-
-Backend Setup
-
-⿡ Navigate to Backend Folder
-
-cd student-mentor-portal/backend
-
-⿢ Install Dependencies
-
+🖥️ Backend Setup
+bash
+Copy
+Edit
+cd server
 npm install
+🔧 Environment Variables
+Create a .env file inside /server:
 
-⿣ Configure Environment Variables
-
-Create a .env file in the backend folder.
-
-Add the following variables:
-
-PORT=5000
+ini
+Copy
+Edit
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
-
-⿤ Start Backend Server
-
-npm start
-
-If successful, the server will start at: http://localhost:5000
-
-Frontend Setup
-
-⿡ Navigate to Frontend Folder
-
-cd ../frontend
-
-⿢ Install Dependencies
-
+PORT=5000
+▶️ Run the server:
+bash
+Copy
+Edit
+npm run dev
+🌐 Frontend Setup
+bash
+Copy
+Edit
+cd client
 npm install
-
-⿣ Start React Application
-
 npm start
 
-If successful, the React app will open at: http://localhost:3000
+🔐 Authentication Details
+Uses JWT tokens stored in localStorage.
 
-API Endpoints
+On successful login/registration, the token is stored.
 
-Auth Routes
+Protected routes use Authorization: Bearer <token> in headers.
 
-POST /api/auth/register - Register as a student or mentor
+Middleware verifies token and decodes user info.
 
-POST /api/auth/login - Login as a student or mentor
+📁 Folder Structure
+pgsql
+Copy
+Edit
+/client              --> React frontend
+  /pages             --> Login, Register, Bookings, Mentor Dashboard
+  /components        --> Navbar, ProtectedRoute, BookingList
+  /context           --> AuthContext (global auth state)
+/server              --> Node backend
+  /models            --> User.js, Booking.js
+  /routes            --> auth.js, bookings.js, mentors.js
+  /middleware        --> authMiddleware.js
+🧪 Seed Data
+Mentors can register and manually set availability.
 
-Mentor Routes
+You can also pre-seed data in MongoDB Compass or programmatically if needed.
 
-GET /api/mentors - Fetch all mentors
+✅ Core Functionalities Implemented
+ Student & Mentor registration/login
 
-POST /api/mentors/availability - Set mentor availability
+ Mentor availability setting
 
-Booking Routes
+ Student session booking
 
-POST /api/bookings - Create a session booking
+ Mentor booking management
 
-GET /api/bookings - View all bookings (mentors only)
+ Role-based authorization
 
-Technologies Used
+ JWT auth with protected routes
 
-Frontend: React.js, TailwindCSS
+ Clean & responsive UI with Material UI
 
-Backend: Node.js, Express.js, MongoDB
+📬 Contact
+Built with ❤️ by [surendra kambella]
+Feel free to reach out at [kambellasurendra@gmail.com] or on LinkedIn.
 
-Authentication: JSON Web Tokens (JWT)
+📎 Submission Notes
+Completed within 48-hour timeframe.
+
+Core functionalities prioritized.
+
+App runs error-free with clear instructions.
+

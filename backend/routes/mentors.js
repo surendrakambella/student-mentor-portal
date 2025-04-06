@@ -1,14 +1,18 @@
 const express = require('express');
 const User = require('../models/User');
+
 const router = express.Router();
 
+// =============================
 // Get all mentors
+// =============================
 router.get('/', async (req, res) => {
   try {
-    const mentors = await User.find({ role: 'mentor' }).select('-password -tokens');
-    res.send(mentors);
+    const mentors = await User.find({ role: 'mentor' }).select('-password');
+    res.status(200).json(mentors);
   } catch (error) {
-    res.status(500).send();
+    console.error('Error fetching mentors:', error.message);
+    res.status(500).json({ error: 'Failed to fetch mentors' });
   }
 });
 

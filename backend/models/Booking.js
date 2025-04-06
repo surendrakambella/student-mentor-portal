@@ -24,14 +24,14 @@ const bookingSchema = new mongoose.Schema({
     enum: ['pending', 'confirmed', 'completed', 'cancelled'],
     default: 'pending'
   }
-}, { 
+}, {
   timestamps: true,
   toJSON: { virtuals: true },
-  toObject: { virtuals: true } 
+  toObject: { virtuals: true }
 });
 
-// Add population to all queries
-bookingSchema.pre(/^find/, function(next) {
+// Auto-populate mentor and student info on find queries
+bookingSchema.pre(/^find/, function (next) {
   this.populate('student', 'name email')
       .populate('mentor', 'name email');
   next();
