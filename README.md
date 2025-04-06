@@ -111,11 +111,13 @@ You can also pre-seed data in MongoDB Compass or programmatically if needed.
 
  Clean & responsive UI with Material UI
  
-![Vite + React - Google Chrome 06-04-2025 09_46_40](https://github.com/user-attachments/assets/85e10e3e-97ba-4465-a173-a86cc14de72c)
+
 
 📬 Contact
 Built with ❤️ by [surendra kambella]
 Feel free to reach out at [kambellasurendra@gmail.com] or on LinkedIn.
+#Screenshots
+![Vite + React - Google Chrome 06-04-2025 09_46_40](https://github.com/user-attachments/assets/85e10e3e-97ba-4465-a173-a86cc14de72c)
 
 📎 Submission Notes
 Completed within 48-hour timeframe.
