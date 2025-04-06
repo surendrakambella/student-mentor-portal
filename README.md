@@ -119,6 +119,7 @@ Feel free to reach out at [kambellasurendra@gmail.com] or on LinkedIn.
 
 # Screenshots
 ![Vite + React - Google Chrome 06-04-2025 09_46_40](https://github.com/user-attachments/assets/85e10e3e-97ba-4465-a173-a86cc14de72c)
+![Vite + React - Google Chrome 06-04-2025 09_47_35](https://github.com/user-attachments/assets/17094c5d-9f8a-4028-926c-dd5fb66cd7ee)
 
 📎 Submission Notes
 Completed within 48-hour timeframe.
