@@ -2,7 +2,7 @@
 📘 Student-Mentor Portal
 A full-stack web application that allows students to book sessions with mentors. Built using MongoDB, Express.js, ReactJS, and NodeJS (MERN stack).
 
-🚀 Features
+# 🚀 Features
 👩‍🎓 For Students:
 Register & login
 
@@ -10,14 +10,14 @@ View available mentors
 
 Book sessions based on mentor availability
 
-🧑‍🏫 For Mentors:
+# 🧑‍🏫 For Mentors:
 Register & login
 
 Set session availability
 
 View & manage student bookings
 
-🧱 Tech Stack
+# 🧱 Tech Stack
 Frontend: ReactJS, Material UI
 
 Backend: NodeJS, ExpressJS
@@ -26,7 +26,7 @@ Database: MongoDB (MongoDB Atlas or Local)
 
 Authentication: JWT (JSON Web Tokens)
 
-🏗️ Application Architecture
+# 🏗️ Application Architecture
 pgsql
 Copy
 Edit
@@ -42,7 +42,7 @@ Node.js & npm installed
 
 MongoDB Atlas account (or local MongoDB)
 
-🖥️ Backend Setup
+# 🖥️ Backend Setup
 bash
 Copy
 Edit
@@ -62,7 +62,7 @@ bash
 Copy
 Edit
 npm run dev
-🌐 Frontend Setup
+# 🌐 Frontend Setup
 bash
 Copy
 Edit
@@ -70,7 +70,7 @@ cd client
 npm install
 npm start
 
-🔐 Authentication Details
+# 🔐 Authentication Details
 Uses JWT tokens stored in localStorage.
 
 On successful login/registration, the token is stored.
@@ -79,7 +79,7 @@ Protected routes use Authorization: Bearer <token> in headers.
 
 Middleware verifies token and decodes user info.
 
-📁 Folder Structure
+# 📁 Folder Structure
 pgsql
 Copy
 Edit
@@ -96,7 +96,7 @@ Mentors can register and manually set availability.
 
 You can also pre-seed data in MongoDB Compass or programmatically if needed.
 
-✅ Core Functionalities Implemented
+# ✅ Core Functionalities Implemented
  Student & Mentor registration/login
 
  Mentor availability setting
@@ -113,7 +113,7 @@ You can also pre-seed data in MongoDB Compass or programmatically if needed.
  
 
 
-📬 Contact
+# 📬 Contact
 Built with ❤️ by [surendra kambella]
 Feel free to reach out at [kambellasurendra@gmail.com] or on LinkedIn.
 
