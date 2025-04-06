@@ -110,6 +110,8 @@ You can also pre-seed data in MongoDB Compass or programmatically if needed.
  JWT auth with protected routes
 
  Clean & responsive UI with Material UI
+ 
+![Vite + React - Google Chrome 06-04-2025 09_46_40](https://github.com/user-attachments/assets/85e10e3e-97ba-4465-a173-a86cc14de72c)
 
 📬 Contact
 Built with ❤️ by [surendra kambella]
